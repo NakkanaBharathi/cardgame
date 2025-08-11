@@ -1,0 +1,106 @@
+/* Body & overall page styling */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2c3a55, #4b4e6d);
+  color: #e0e7ff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 0 0 8px #f7c948; /* soft golden glow */
+  letter-spacing: 1.5px;
+}
+
+p {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #d6e0ffcc;
+  text-shadow: 0 0 3px #7f8cf7aa;
+}
+
+/* Game board grid */
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+  perspective: 1200px;
+  margin-bottom: 25px;
+}
+
+/* Card styling */
+.card {
+  width: 140px;
+  height: 190px;
+  background: #3e4a72;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(47, 56, 85, 0.8);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Flip card when clicked */
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.front-face,
+.back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+}
+
+/* Front face shows the image */
+.front-face {
+  transform: rotateY(180deg);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+  user-select: none;
+}
+
+/* Back face styling */
+.back-face {
+  background: linear-gradient(135deg, #6a4dbb, #5941a9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  user-select: none;
+  color: #f7c948;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px #483b8b;
+}
+
+/* Status message */
+#status {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f7c948;
+  text-shadow: 0 0 8px #8f7c3d;
+}
