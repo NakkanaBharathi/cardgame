@@ -1,0 +1,1 @@
+Magic Card Game is an engaging and interactive card game designed to provide hours of entertainment. Players test their skills by matching, sorting, or strategizing with a deck of cards following simple yet challenging game rules. Built with a focus on smooth gameplay and an intuitive interface, this game is perfect for casual players and card game enthusiasts alike.
